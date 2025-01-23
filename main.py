@@ -3,14 +3,12 @@ import streamlit as st
 import pickle
 import time
 import nltk
-from langchain import OpenAI
-from langchain.chains import RetrievalQAWithSourcesChain
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.document_loaders import UnstructuredURLLoader
-# from langchain.embeddings import OpenAIEmbeddings
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.llms import HuggingFaceHub
-from langchain.vectorstores import FAISS
+from langchain_community.llms import OpenAI
+from langchain_community.chains import RetrievalQAWithSourcesChain
+from langchain_community.document_loaders import UnstructuredURLLoader
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.llms import HuggingFaceHub
+from langchain_community.vectorstores import FAISS
 
 huggingface_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
